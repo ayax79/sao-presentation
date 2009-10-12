@@ -14,7 +14,7 @@
 		<hibernate.use_second_level_cache.cache>true</hibernate.use_second_level_cache.cache>
 		<hibernate.use_query_cache.cache>true</hibernate.use_query_cache.cache>
 		<hibernate.cache.provider>org.hibernate.cache.HashtableCacheProvider</hibernate.cache.provider>
-		<hibernate.index.dir>/git/blackbox/server/target/lucene</hibernate.index.dir>
+		<hibernate.index.dir>target/lucene</hibernate.index.dir>
 		<hibernate.directory.provider>org.hibernate.search.store.FSDirectoryProvider</hibernate.directory.provider>
 	</properties>
 	<dependencies>

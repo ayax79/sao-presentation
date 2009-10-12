@@ -34,6 +34,13 @@ public class User {
 	
 	@IndexedEmbedded 
 	@Embedded 
-	Address address;
+	Address address = new Address();
+	
+	public User() { }
+
+	public User(String firstname, String lastname) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
 
 }

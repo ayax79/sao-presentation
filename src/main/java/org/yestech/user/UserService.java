@@ -1,11 +1,13 @@
 package org.yestech.user;
 
+import java.util.List;
+
 public interface UserService {
 
-	User save(User u);
+	void save(User u);
 
 	User loadById(long id);
-
-	User loadByName(String name);
+	
+	List<User> search(String query);
 
 }
