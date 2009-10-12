@@ -2,3 +2,8 @@
 *.iws
 *.iml
 target
+.classpath
+.settings
+.springBeans
+*~
+.project
