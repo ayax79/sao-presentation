@@ -10,10 +10,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.yestech.BaseIntegrationTest;
 
-@ContextConfiguration(locations = "classpath:/spring.xml")
-@RunWith(SpringJUnit4ClassRunner.class)
-public class UserServiceIntegrationTest {
+public class UserServiceIntegrationTest extends BaseIntegrationTest {
 	
 	@Resource
 	private UserService userService;
@@ -23,8 +22,8 @@ public class UserServiceIntegrationTest {
 		long testId = 1;
 		User result = userService.loadById(testId);
 		assertNotNull(result);
-		assertEquals("Issac", result.getFirstname());
-		assertEquals("Brock", result.getLastname());
+		assertEquals("Jimmy", result.getFirstname());
+		assertEquals("Page", result.getLastname());
 	}
 	
 	@Test

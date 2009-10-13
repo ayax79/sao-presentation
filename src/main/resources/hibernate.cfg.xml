@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!--suppress HibernateConfigDomInspection -->
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- caching -->
+        <property name="hibernate.cache.provider_class">${hibernate.cache.provider}</property>
+        <property name="hibernate.cache.use_second_level_cache">${hibernate.use_second_level_cache.cache}</property>
+        <property name="hibernate.cache.use_query_cache">${hibernate.use_query_cache.cache}</property>
+        <property name="hibernate.generate_statistics">true</property>
+        <property name="hibernate.cache.use_structured_entries">true</property>
+
+        <!-- search -->
+        <property name="hibernate.search.default.directory_provider">${hibernate.directory.provider}</property>
+        <property name="hibernate.search.default.batch.merge_factor">10</property>
+        <property name="hibernate.search.default.batch.max_buffered_docs">10</property>
+        <property name="hibernate.search.default.indexBase">${hibernate.index.dir}</property>
+
+        <!-- hibernate -->
+        <property name="hibernate.dialect">${hibernate.dialect}</property>
+        <property name="hibernate.show_sql">${hibernate.show.sql}</property>
+        <property name="hibernate.format_sql">${hibernate.format.sql}</property>
+        <property name="hibernate.jdbc.batch_size">100</property>
+        <property name="hibernate.archive.autodetection">class</property>
+
+		<!-- Object mappings  -->
+		<mapping class="org.yestech.user.User"/>
+
+    </session-factory>
+</hibernate-configuration>

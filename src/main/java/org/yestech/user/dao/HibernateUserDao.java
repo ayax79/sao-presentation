@@ -40,7 +40,7 @@ public class HibernateUserDao implements UserDao {
 	 * @see org.yestech.user.dao.UserDao#loadById(long)
 	 */
 	public User loadById(long id) {
-		return (User) template.load(User.class, id); 
+		return (User) template.get(User.class, id); 
 	}
 	
 	@Override
