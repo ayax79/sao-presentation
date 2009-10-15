@@ -185,6 +185,9 @@
                             </dependency>
                         </dependencies>
                     </plugin>
+                    <!--
+                    Available at http://yestech.org/
+                    -->
                     <plugin>
                         <groupId>org.yestech.maven</groupId>
                         <artifactId>maven-hibernate-search</artifactId>
